@@ -20,7 +20,7 @@ Normalize the use of core Laravel features such as Pagination, Gates, Commands, 
 
 ### Good Luck!
 
-# How to use my solution
+# Steps on how to deploy
 
 1. Pull the current codebase.
 2. Configure Email Client in .env file (e.g. mailhog, Mailtrap) to recieve temporary login details
@@ -33,4 +33,7 @@ Normalize the use of core Laravel features such as Pagination, Gates, Commands, 
     ```bash
         php artisan create:user {name of user} {The email of the user} {The user role can either be admin, user or agent}
     ```
-6. 
+6. Serve with the artisan serve command
+    ```bash
+        php artisan serve
+    ```
