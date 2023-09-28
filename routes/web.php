@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Auth\SetNewPasswordController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +17,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/set-new-password', [SetNewPasswordController::class, 'index'])->name('set.password');
+Route::post('/set-new-password', [SetNewPasswordController::class, 'update'])->name('set.password.post');

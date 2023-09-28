@@ -19,3 +19,18 @@
 Normalize the use of core Laravel features such as Pagination, Gates, Commands, Eloquent eager loading etc. Using these advanced features can greatly impact our decision.
 
 ### Good Luck!
+
+# How to use my solution
+
+1. Pull the current codebase.
+2. Configure Email Client in .env file (e.g. mailhog, Mailtrap) to recieve temporary login details
+3. Run Migration
+4. Seed Database to create Ticket Departments
+    ```bash
+        php artisan db:seed
+    ```
+5. Create new admin with the command the following command 
+    ```bash
+        php artisan create:user {name of user} {The email of the user} {The user role can either be admin, user or agent}
+    ```
+6. 
