@@ -32,7 +32,7 @@ class AgentController extends Controller
      */
     public function create()
     {
-        $department = TicketDepartment::all();
+        $department = TicketDepartment::whereisDeleted(0)->get();
         return view('admin.agents.create')->with([
             "departments" => $department
         ]);

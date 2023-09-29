@@ -63,4 +63,14 @@ class Ticket extends Model
     public function scopeOnHoldTicket($query){
         return $query->where('status', 'on-hold');
     }
+
+    /**
+     * Get the category that owns the Ticket
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function category(): BelongsTo
+    {
+        return $this->belongsTo(TicketDepartment::class, 'ticket_department_id');
+    }
 }

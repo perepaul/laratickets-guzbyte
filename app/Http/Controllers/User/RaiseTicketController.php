@@ -53,7 +53,7 @@ class RaiseTicketController extends Controller
 
     public function create()
     {
-        $department = TicketDepartment::all();
+        $department = TicketDepartment::whereIsDeleted(0)->get();
         return view('users.tickets.create')->with([
             "department" => $department,
             

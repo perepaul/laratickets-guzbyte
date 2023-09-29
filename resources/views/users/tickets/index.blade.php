@@ -31,6 +31,7 @@
                             <th>Ticket ID</th>
                             <th>Subject</th>
                             <th>file</th>
+                            <th>category</th>
                             <th>Status</th>
                             <th>Created Date</th>
                             <th></th>
@@ -48,6 +49,9 @@
                                     @if(!is_null($ticket->attachment))
                                         <a href="{{ asset($ticket->attachment) }}">view attachment</a>
                                     @endif
+                                </td>
+                                <td>
+                                    {{ $ticket->category->name }}
                                 </td>
                                 <td>
                                     @if ($ticket->status->value === 'open')

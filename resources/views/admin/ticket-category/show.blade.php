@@ -10,7 +10,7 @@
 <div class="row">
     <div class="col-12">
       <div class="page-title-box d-sm-flex align-items-center justify-content-between bg-transparent">
-        <h4 class="mb-sm-0">Tickets</h4>
+        <h4 class="mb-sm-0">Tickets Under {{ $category->name }} Category</h4>
         <div class="page-title-right">
           <ol class="breadcrumb m-0">
             <li class="breadcrumb-item">
@@ -92,7 +92,6 @@
                             <th>Ticket ID</th>
                             <th>Subject</th>
                             <th>File</th>
-                            <th>Category</th>
                             <th>Status</th>
                             <th>Created Date</th>
                             <th>Action</th>
@@ -112,9 +111,6 @@
                                         @else
                                             No attachment
                                         @endif
-                                    </td>
-                                    <td>
-                                        {{ $ticket->category->name }}
                                     </td>
                                     <td>
                                         @if ($ticket->status->value === 'open')

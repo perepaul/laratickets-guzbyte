@@ -15,7 +15,7 @@ class FilterAction {
      * @param string $status The status of the Ticket to filter
      * @return Builder
      */
-    static function run($dateArr=null, Builder $tickets, $ticket_id=null, $status)
+    static function run($dateArr=null,  $tickets, $ticket_id=null, $status)
     {
         if(!is_null($dateArr)){
             if(count($dateArr) == 1){
